@@ -1,0 +1,7 @@
+help:
+Use the keyboard direction-----UP/DOWN/LEFT/RIGHT  to control your game_character
+Try to input your student ID to make your scores stored in our data.txt
+Choose the color which you like in the second menu
+Have Fun!
+---------------------------------------------------------------------------------------------------------------------
+(Please close the console and try running the game again)

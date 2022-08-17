@@ -1,0 +1,79 @@
+# Project: demo
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = output/exceptio.o output/genlib.o output/graphics.o output/random.o output/simpio.o output/strlib.o output/demo.o output/imgui.o output/Enemymove.o output/Gamesetting.o output/Itemfunctions.o output/Items.o output/Mapdisplay.o output/Mapeditor.o output/Mygraphics.o output/Pageahead.o output/Pagebehind.o output/Players.o
+LINKOBJ  = output/exceptio.o output/genlib.o output/graphics.o output/random.o output/simpio.o output/strlib.o output/demo.o output/imgui.o output/Enemymove.o output/Gamesetting.o output/Itemfunctions.o output/Items.o output/Mapdisplay.o output/Mapeditor.o output/Mygraphics.o output/Pageahead.o output/Pagebehind.o output/Players.o
+LIBS     = -L"E:/cÅÌ/program/Dev-Cpp/MinGW64/lib" -L"E:/cÅÌ/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lwinmm -mwindows -g3
+INCS     = -I"E:/cÅÌ/program/Dev-Cpp/MinGW64/include" -I"E:/cÅÌ/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/cÅÌ/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"../libgraphics" -I"../simpleGUI"
+CXXINCS  = -I"E:/cÅÌ/program/Dev-Cpp/MinGW64/include" -I"E:/cÅÌ/program/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/cÅÌ/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/cÅÌ/program/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"../libgraphics" -I"../simpleGUI"
+BIN      = output/demo.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+output/exceptio.o: ../libgraphics/exceptio.c
+	$(CC) -c ../libgraphics/exceptio.c -o output/exceptio.o $(CFLAGS)
+
+output/genlib.o: ../libgraphics/genlib.c
+	$(CC) -c ../libgraphics/genlib.c -o output/genlib.o $(CFLAGS)
+
+output/graphics.o: ../libgraphics/graphics.c
+	$(CC) -c ../libgraphics/graphics.c -o output/graphics.o $(CFLAGS)
+
+output/random.o: ../libgraphics/random.c
+	$(CC) -c ../libgraphics/random.c -o output/random.o $(CFLAGS)
+
+output/simpio.o: ../libgraphics/simpio.c
+	$(CC) -c ../libgraphics/simpio.c -o output/simpio.o $(CFLAGS)
+
+output/strlib.o: ../libgraphics/strlib.c
+	$(CC) -c ../libgraphics/strlib.c -o output/strlib.o $(CFLAGS)
+
+output/demo.o: ../democode/demo.c
+	$(CC) -c ../democode/demo.c -o output/demo.o $(CFLAGS)
+
+output/imgui.o: ../simpleGUI/imgui.c
+	$(CC) -c ../simpleGUI/imgui.c -o output/imgui.o $(CFLAGS)
+
+output/Enemymove.o: ../democode/Enemymove.c
+	$(CC) -c ../democode/Enemymove.c -o output/Enemymove.o $(CFLAGS)
+
+output/Gamesetting.o: ../democode/Gamesetting.c
+	$(CC) -c ../democode/Gamesetting.c -o output/Gamesetting.o $(CFLAGS)
+
+output/Itemfunctions.o: ../democode/Itemfunctions.c
+	$(CC) -c ../democode/Itemfunctions.c -o output/Itemfunctions.o $(CFLAGS)
+
+output/Items.o: ../democode/Items.c
+	$(CC) -c ../democode/Items.c -o output/Items.o $(CFLAGS)
+
+output/Mapdisplay.o: ../democode/Mapdisplay.c
+	$(CC) -c ../democode/Mapdisplay.c -o output/Mapdisplay.o $(CFLAGS)
+
+output/Mapeditor.o: ../democode/Mapeditor.c
+	$(CC) -c ../democode/Mapeditor.c -o output/Mapeditor.o $(CFLAGS)
+
+output/Mygraphics.o: ../democode/Mygraphics.c
+	$(CC) -c ../democode/Mygraphics.c -o output/Mygraphics.o $(CFLAGS)
+
+output/Pageahead.o: ../democode/Pageahead.c
+	$(CC) -c ../democode/Pageahead.c -o output/Pageahead.o $(CFLAGS)
+
+output/Pagebehind.o: ../democode/Pagebehind.c
+	$(CC) -c ../democode/Pagebehind.c -o output/Pagebehind.o $(CFLAGS)
+
+output/Players.o: ../democode/Players.c
+	$(CC) -c ../democode/Players.c -o output/Players.o $(CFLAGS)
